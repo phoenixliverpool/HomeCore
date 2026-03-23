@@ -1,18 +1,18 @@
-import time
-import sys
+from fastapi import FastAPI
+import uvicorn
 
-def boot_sequence():
-    print("🚀 HomeCore Initializing...")
-    time.sleep(0.5)
-    print("🔌 Loading Drivers...")
-    time.sleep(0.5)
-    print("🛡️  Security Check... OK")
-    time.sleep(0.5)
-    print("✅ HomeCore Online. Waiting for commands.")
+app = FastAPI(title="HomeCore")
 
+# A simple welcome route
+@app.get("/")
+def read_root():
+    return {"status": "HomeCore Online", "version": "0.1"}
+
+# A fake light switch route
+@app.get("/light/toggle")
+def toggle_light():
+    return {"action": "toggled", "device": "Living Room Light"}
+
+# Run the server if this file is executed directly
 if __name__ == "__main__":
-    try:
-        boot_sequence()
-    except KeyboardInterrupt:
-        print("\n🛑 HomeCore Shutting Down.")
-        sys.exit()
+    uvicorn.run(app, host="127.0.0.1", port=8000)
