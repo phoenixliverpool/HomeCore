@@ -84,10 +84,12 @@ PREBUILT_ADDONS = {
     }
 }
 
-def create_manifest_files():
+def create_manifest_files(addons_dir="addons"):
     """Create manifest files for all pre-built addons"""
+    addons_path = Path(addons_dir)
+    addons_path.mkdir(exist_ok=True)
     for addon_id, manifest_data in PREBUILT_ADDONS.items():
-        addon_path = Path("addons") / addon_id
+        addon_path = addons_path / addon_id
         addon_path.mkdir(exist_ok=True)
         manifest_file = addon_path / "manifest.json"
         if not manifest_file.exists():  # Only create if doesn't exist
