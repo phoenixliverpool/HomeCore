@@ -1,0 +1,10 @@
+{
+  "name": "MQTT Broker",
+  "description": "Universal messaging for IoT devices",
+  "version": "1.0.0",
+  "author": "HomeCore Team",
+  "requirements": [
+    "paho-mqtt"
+  ],
+  "config_flow": true
+}

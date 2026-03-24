@@ -1,0 +1,10 @@
+{
+  "name": "Sonoff",
+  "description": "Connect to Sonoff WiFi switches and sensors",
+  "version": "1.0.0",
+  "author": "HomeCore Team",
+  "requirements": [
+    "requests"
+  ],
+  "config_flow": true
+}

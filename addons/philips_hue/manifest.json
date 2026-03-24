@@ -1,0 +1,10 @@
+{
+  "name": "Philips Hue",
+  "description": "Control your Hue smart bulbs and bridges",
+  "version": "1.0.0",
+  "author": "HomeCore Team",
+  "requirements": [
+    "requests"
+  ],
+  "config_flow": true
+}

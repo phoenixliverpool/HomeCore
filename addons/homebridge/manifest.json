@@ -1,0 +1,10 @@
+{
+  "name": "Homebridge",
+  "description": "Bridge HomeKit accessories to HomeCore",
+  "version": "1.0.0",
+  "author": "HomeCore Team",
+  "requirements": [
+    "pyhap"
+  ],
+  "config_flow": true
+}
